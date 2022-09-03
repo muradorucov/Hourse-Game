@@ -1,0 +1,51 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+
+    width: 100%;
+
+    background-color: rgb(60, 177, 60);
+}
+
+.game-dashborad {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourses {
+    position: relative;
+
+}
+
+.hourse1,
+.hourse2,
+.hourse3 {
+    position: absolute;
+    
+    transition: all 1s ease;
+}
+.hourse1{
+    top: 0;
+}
+.hourse2{
+    top:50px;
+}
+.hourse3{
+    top:100px;
+}
+
+img {
+    width: 100px;
+}
+
+.finish {
+    width: 10px;
+    height: 180px;
+    background-color: rgb(255, 2, 2);
+    border-right: 1px solid red;
+}
