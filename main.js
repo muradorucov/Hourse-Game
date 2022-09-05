@@ -5,6 +5,7 @@ let comment = document.querySelector(".comment span")
 let startBtn = document.querySelector("#start-btn")
 let resetBtn = document.querySelector("#reset-btn")
 let timerDisplay = document.querySelector(".timer")
+let audioPlay = document.querySelector(".audio audio")
 
 
 var hourseFirst_left = 0;
@@ -14,28 +15,30 @@ var timer = 0;
 
 startBtn.addEventListener('click', () => {
     var _tick = setInterval(function () {
+        audioPlay.play()
         timer += 1;
         let msTimer = timer < 10 ? "0" + timer : timer
         timerDisplay.innerText = msTimer;
-        console.log(hourseFirst_left)
-        hourseFirst_left = hourseFirst_left + Math.floor(Math.random() * 30);
+
+
+        hourseFirst_left = hourseFirst_left + Math.floor(Math.random() * 50);
         hourseFirst.style.left = hourseFirst_left + "px";
 
 
-        hourseSecond_left = hourseSecond_left + Math.floor(Math.random() * 30);
+        hourseSecond_left = hourseSecond_left + Math.floor(Math.random() * 50);
         hourseSecond.style.left = hourseSecond_left + "px";
 
 
-        hourseTrhee_left = hourseTrhee_left + Math.floor(Math.random() * 30);
+        hourseTrhee_left = hourseTrhee_left + Math.floor(Math.random() * 50);
         hourseTrhee.style.left = hourseTrhee_left + "px";
 
 
         if (hourseFirst_left > hourseSecond_left && hourseFirst_left > hourseTrhee_left) {
-            comment.innerText = "1-ci at çempionluğa doğru gedir!";
+            comment.innerText = "Son 400'lüğe gelirken Gülbatur birinci !";
         } else if (hourseSecond_left > hourseTrhee_left && hourseSecond_left > hourseFirst_left) {
-            comment.innerText = "Vəəə 2-ci at irəli keçir!";
+            comment.innerText = "Şahbatur birinci geliyor!";
         } else if (hourseTrhee_left > hourseSecond_left && hourseTrhee_left > hourseFirst_left) {
-            comment.innerText = "3-ci at digərlərini qabaqlayır!";
+            comment.innerText = "Şahbatur sondan geliyo!";
         }
 
         if (hourseFirst_left > 930 || hourseSecond_left > 930 || hourseTrhee_left > 930) {
@@ -51,6 +54,9 @@ startBtn.addEventListener('click', () => {
         }
         resetBtn.addEventListener('click', () => {
             clearInterval(_tick);
+
+            audioPlay.currentTime=0
+            audioPlay.pause()
 
             hourseFirst_left = 0;
             hourseSecond_left = 0;

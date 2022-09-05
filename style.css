@@ -114,3 +114,7 @@ body {
     color: #ffffff;
     font-weight: 600;
 }
+
+.audio{
+    display: none;
+}
