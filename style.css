@@ -90,7 +90,7 @@ body {
 .hourse img {
     width: 120px;
     position: relative;
-    transition: all ease-in-out .6s;
+    transition: all ease-in-out .9s;
     z-index: 5;
 }
 

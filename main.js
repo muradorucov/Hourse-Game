@@ -38,13 +38,13 @@ startBtn.addEventListener('click', () => {
             comment.innerText = "3-ci at digərlərini qabaqlayır!";
         }
 
-        if (hourseFirst_left > 920 || hourseSecond_left > 920 || hourseTrhee_left > 920) {
+        if (hourseFirst_left > 930 || hourseSecond_left > 930 || hourseTrhee_left > 930) {
             clearInterval(_tick);
-            if (hourseTrhee_left > 920) {
+            if (hourseTrhee_left > 930) {
                 comment.innerText = "3-cü at çempiondur!";
-            } else if (hourseSecond_left > 920) {
+            } else if (hourseSecond_left > 930) {
                 comment.innerText = "2-ci at çempiondur!";
-            } else if (hourseFirst_left > 920) {
+            } else if (hourseFirst_left > 930) {
                 comment.innerText = "1-ci at çempiondur!";
             }
 
