@@ -9,23 +9,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="game-dashborad">
-            <div class="hourses">
-                <div class="hourse1">
-                    <img src="./img/hourse.gif" alt="">
+    <section id="game-display">
+        <div class="container">
+            <div class="row">
+                <div class="timer">00</div>
+                <div class="hourses">
+                    <div class="hourse">
+                        <img src="./img/hourse.gif" alt="" class="hourse-one">
+                    </div>
+                    <div class="hourse">
+                        <img src="./img/hourse.gif" alt="" class="hourse-two">
+                    </div>
+                    <div class="hourse">
+                        <img src="./img/hourse.gif" alt="" class="hourse-three">
+                    </div>
                 </div>
-                <div class="hourse2">
-                    <img src="./img/hourse.gif" alt="">
-                </div>
-                <div class="hourse3">
-                    <img src="./img/hourse.gif" alt="">
+                <div class="finish">
+                    <span>FINISH</span>
                 </div>
             </div>
-            <div class="finish"></div>
         </div>
-    </div>
-    
+    </section>
+    <section id="game-btn">
+        <div class="container">
+            <div class="row">
+                <div class="btns">
+                    <button id="start-btn">START</button>
+                    <button id="reset-btn" >RESET</button>
+                </div>
+                <div class="comment">
+                    <span >Yarış başlayır!</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
