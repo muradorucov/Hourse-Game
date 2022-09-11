@@ -14,6 +14,8 @@ var hourseTrhee_left = 0;
 var timer = 0;
 
 startBtn.addEventListener('click', () => {
+    startBtn.disabled = true;
+    resetBtn.disabled = false;
     var _tick = setInterval(function () {
         audioPlay.play()
         timer += 1;
@@ -53,9 +55,12 @@ startBtn.addEventListener('click', () => {
 
         }
         resetBtn.addEventListener('click', () => {
+            startBtn.disabled = false;
+            resetBtn.disabled = true;
+
             clearInterval(_tick);
 
-            audioPlay.currentTime=0
+            audioPlay.currentTime = 0
             audioPlay.pause()
 
             hourseFirst_left = 0;

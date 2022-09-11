@@ -50,7 +50,12 @@ body {
 #reset-btn:active {
     background-color: rgb(71, 69, 69);
 }
-
+#start-btn:disabled{
+    background-color: #15161583;
+}
+#reset-btn:disabled{
+    background-color: #15161583;
+}
 .comment {
     width: 436px;
     font-size: 24px;
@@ -73,9 +78,14 @@ body {
     border-radius: 50%;
     background: rgb(11, 11, 14);
 }
+.hourse-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .hourses {
-    width: 100%;
+    width: 1013px;
     margin-left: -3rem;
 }
 
